@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>CHATBOT</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body background="loginbackground.png">
+   <div class="container">
+    <div class="content">
+        <form id="login" style="display: block;">
+            <label id="login_usernamel" >USERNAME:</label>
+            <input type="text" id="input_data" class="username_inputi" placeholder="Enter user name" required>
+            <label id="login_usernamel">PASSWORD:</label>
+            <input type="password" id="input_password" class="password_inputi" placeholder="Enter tha password" required>
+            <button type="button" class="toggle_btn" onclick="Register()">SIGNUP</button>
+            <button type="submit" class="submit_input_login" id="login-btn">LOGIN</button> 
+        </form>
+        <form id="signin"  style="display: none;">
+            <label id="signin_usernamel">USERNAME:</lable>
+            <input type="text" id="user_data" class="signin_usernamei" placeholder="Enter user name" required>
+            <label id="sign_email">EMAIL:</label>
+            <input type="email" id="user_mail" class="signin_emaili" placeholder="Enter email id" required>
+            <label id="signin_password">PASSWORD:</label>
+            <input type="text" id="user_password" class="signin_passwordi" placeholder="Enter password" required>
+            <label id="signin_conpassword">CONFORM PASSWORD:</label>
+            <input type="text" id="user_conformpassword" class="signin_conpasswordi" placeholder="Enter conform password" required>
+            <button type="submit" class="toggle_btn" onclick="Signup()">LOGIN</button>
+            <button type="submit" class="submit_input_signin" id="sign-btn">SIGNIN</button> 
+        </form>
+        </div>
+        <div class = "dashboard" style="background-color: white;">
+
+        </div>
+    </div>
+   <script>
+    var login=document.getElementById("login");
+    var signin=document.getElementById("signin");
+    function Signup(){
+        signin.style.display='none';
+        login.style.display='block';
+    }
+    function Register(){
+        signin.style.display='block';
+        login.style.display='none';
+    }
+   </script>
+   <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyBwloPwt9v7XImYaGFfZbT_KT40R3UX-cI",
+  authDomain: "chatbot-bb494.firebaseapp.com",
+  projectId: "chatbot-bb494",
+  storageBucket: "chatbot-bb494.appspot.com",
+  messagingSenderId: "630529085522",
+  appId: "1:630529085522:web:445b9df685c13999fb4f8b",
+  measurementId:"G-WVGF33KSF2"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="app.js"></script>
+</body>

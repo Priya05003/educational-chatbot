@@ -1,0 +1,31 @@
+body{
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .login{
+    margin-bottom: 3%;
+    background-color: aquamarine;
+    
+ }
+ .container{
+   margin-left: 20px;
+   margin-bottom: 10%;
+   padding-top: 5%;
+ }
+ .content{
+    background-color: aquamarine;
+    margin-left: 55%;
+    margin-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    
+ }
+ input[type=text], input[type=password], input[type=email] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+ }
